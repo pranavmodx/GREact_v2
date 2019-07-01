@@ -7,7 +7,7 @@ let topicIDS2 = [];
 
 axios.get("http://127.0.0.1:8000/api/words/").then(res => {
   let greData = res.data;
-  
+
   for (let i = 0; i < greData.length; i++) {
     if (i === 0) {
       topicIDS2.push(greData[i].id);
@@ -19,28 +19,21 @@ axios.get("http://127.0.0.1:8000/api/words/").then(res => {
 
 // console.log(topicIDS2);
 
-// let topicIDS = [];
-// for (let i = 0; i < greData.length; i++) {
-//   if (i === 0) {
-//     topicIDS.push(greData[i].ID);
-//   } else if (greData[i].TOPIC !== greData[i - 1].TOPIC) {
-//     topicIDS.push(greData[i].ID);
-//   }
-// }
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "SHOW_WORD":
       return {
         ...state,
         // Magic line
-        currentTopicNo: Number(state.words[action.payload].topic.slice(0, 3)) - 1,
+        currentTopicNo:
+          Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
     case "SHOW_RANDOM_WORD":
       return {
         ...state,
-        currentTopicNo: Number(state.words[action.payload].topic.slice(0, 3)) - 1,
+        currentTopicNo:
+          Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
     case "SHOW_TOPIC":
@@ -52,15 +45,25 @@ const reducer = (state, action) => {
     case "LOAD_TOPIC":
       return {
         ...state,
-        currentTopicNo: Number(state.words[action.payload].topic.slice(0, 3)) - 1,
+        currentTopicNo:
+          Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
     case "SHOW_SEARCH_RESULT":
       return {
         ...state,
-        currentTopicNo: Number(state.words[action.payload].topic.slice(0, 3)) - 1,
+        currentTopicNo:
+          Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
+    // case "HOME":
+    //   return {
+    //     ...state,
+    //     words: [],
+    //     currentWord: {},
+    //     currentTopicNo: 0,
+    //     topicIDS: topicIDS2
+    //   };
     default:
       return state;
   }
@@ -68,9 +71,7 @@ const reducer = (state, action) => {
 
 export class Provider extends Component {
   state = {
-    // words: greData,
     words: [],
-    // currentWord: greData[0],
     currentWord: {},
     currentTopicNo: 0,
     topicIDS: topicIDS2,
@@ -79,9 +80,8 @@ export class Provider extends Component {
 
   componentDidMount() {
     axios.get("http://127.0.0.1:8000/api/words/").then(res => {
-      this.setState({words: res.data, currentWord: res.data[0]})
-      // console.log(res.data[0]);
-    })
+      this.setState({ words: res.data, currentWord: res.data[0] });
+    });
   }
 
   render() {

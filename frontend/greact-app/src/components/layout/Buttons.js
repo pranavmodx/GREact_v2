@@ -32,7 +32,6 @@ class Buttons extends Component {
       <Consumer>
         {value => {
           const { words, currentWord, dispatch } = value;
-          // console.log("Buttons il index : ", currentWord);
           return (
             <div className="btn-group mx-auto">
               <button
