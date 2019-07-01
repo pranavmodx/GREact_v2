@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Consumer } from "../../context";
-import TopicsPagination from "../pages/TopicsPagination";
 
 class Topics extends Component {
   constructor(props) {
@@ -16,8 +15,9 @@ class Topics extends Component {
     dispatch({ type: "LOAD_TOPIC", payload: id });
   }
 
-  paginate(number) {
-    this.setState({currentPage : number});
+  paginate(number, pageCount) {
+    if (number !== 0 && number !== pageCount)
+      this.setState({ currentPage: number });
   }
 
   render() {
@@ -27,23 +27,26 @@ class Topics extends Component {
           const { words, topicIDS, dispatch } = value;
           const indexOfLastTopic =
             this.state.topicsPerPage * this.state.currentPage;
-          console.log(indexOfLastTopic);
           const indexOfFirstTopic = indexOfLastTopic - this.state.topicsPerPage;
-          console.log(indexOfLastTopic);
           const currentTopicIDS = topicIDS.slice(
             indexOfFirstTopic,
             indexOfLastTopic
           );
-          console.log(currentTopicIDS);
-
-          // const currentTopicIDS2 = [];
-          // for (let i = 0; i < currentTopicIDS.length; i++) {
-          //   if (i == 0 || i == currentTopicIDS.length - 1)
-          //     currentTopicIDS2.push(currentTopicIDS[i]);
-          // }
 
           const pageCount = Math.ceil(topicIDS.length / currentTopicIDS.length);
-          console.log(pageCount);
+          let pageNumbers;
+          const midPages = [];
+        
+          for (
+            let i = this.state.currentPage - 3;
+            i < this.state.currentPage + 3;
+            i++
+          ) {
+            if (i > 0 && i < pageCount) {
+              midPages.push(i);
+            }
+          }
+          pageNumbers = [0, ...midPages, pageCount];
 
           return (
             <div className="container">
@@ -64,11 +67,19 @@ class Topics extends Component {
                     </Link>
                   </li>
                 ))}
-                <TopicsPagination
-                  pageCount={pageCount}
-                  currentPage={this.state.currentPage}
-                  paginate={this.paginate}
-                />
+
+                <ul className="pagination">
+                  {pageNumbers.map(number => (
+                    <li className="page-item" key={number}>
+                      <a
+                        className="page-link"
+                        onClick={this.paginate.bind(this, number, pageCount)}
+                      >
+                        {number}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </ul>
             </div>
           );
