@@ -56,14 +56,13 @@ const reducer = (state, action) => {
           Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
-    // case "HOME":
-    //   return {
-    //     ...state,
-    //     words: [],
-    //     currentWord: {},
-    //     currentTopicNo: 0,
-    //     topicIDS: topicIDS2
-    //   };
+    case "HOME":
+      return { 
+        ...state,
+        currentWord: state.words[0],
+        currentTopicNo: 0,
+        topicIDS: topicIDS2
+      };
     default:
       return state;
   }
@@ -81,6 +80,7 @@ export class Provider extends Component {
   componentDidMount() {
     axios.get("http://127.0.0.1:8000/api/words/").then(res => {
       this.setState({ words: res.data, currentWord: res.data[0] });
+      // console.log(res.data);
     });
   }
 

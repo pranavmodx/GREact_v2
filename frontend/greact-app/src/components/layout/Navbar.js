@@ -15,7 +15,7 @@ class Navbar extends Component {
   }
 
   backToHome(dispatch) {
-    dispatch({ type: "HOME", payload: 0 });
+    dispatch({ type: "HOME", payload: null });
   }
 
   render() {
@@ -93,9 +93,13 @@ class Navbar extends Component {
 
           return (
             <React.Fragment>
-              <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-5">
+              <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
                 <div className="container">
-                  <Link className="navbar-brand text-success" to="/">
+                  <Link
+                    className="navbar-brand text-success"
+                    to="/"
+                    onClick={this.backToHome.bind(this, dispatch)}
+                  >
                     GREact
                   </Link>
                   <ul className="navbar-nav">
@@ -103,7 +107,7 @@ class Navbar extends Component {
                       <Link
                         className="nav-link text-light"
                         to="/"
-                        // onClick={this.backToHome.bind(dispatch)}
+                        onClick={this.backToHome.bind(this, dispatch)}
                       >
                         <i className="fas fa-home mr-1" />
                         Home
