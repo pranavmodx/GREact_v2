@@ -3,22 +3,6 @@ import axios from "axios";
 
 const Context = React.createContext();
 
-let topicIDS2 = [];
-
-axios.get("http://127.0.0.1:8000/api/words/").then(res => {
-  let greData = res.data;
-
-  for (let i = 0; i < greData.length; i++) {
-    if (i === 0) {
-      topicIDS2.push(greData[i].id);
-    } else if (greData[i].topic !== greData[i - 1].topic) {
-      topicIDS2.push(greData[i].id);
-    }
-  }
-});
-
-// console.log(topicIDS2);
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "SHOW_WORD":
@@ -57,11 +41,11 @@ const reducer = (state, action) => {
         currentWord: state.words[action.payload]
       };
     case "HOME":
-      return { 
+      return {
         ...state,
         currentWord: state.words[0],
         currentTopicNo: 0,
-        topicIDS: topicIDS2
+        topicIDS: state.topicIDS2
       };
     default:
       return state;
@@ -73,14 +57,26 @@ export class Provider extends Component {
     words: [],
     currentWord: {},
     currentTopicNo: 0,
-    topicIDS: topicIDS2,
+    topicIDS: [],
     dispatch: action => this.setState(state => reducer(state, action))
   };
 
   componentDidMount() {
+    let topicIDS2 = [];
+
     axios.get("http://127.0.0.1:8000/api/words/").then(res => {
-      this.setState({ words: res.data, currentWord: res.data[0] });
-      // console.log(res.data);
+
+      let greData = res.data;
+
+      for (let i = 0; i < greData.length; i++) {
+        if (i === 0) {
+          topicIDS2.push(greData[i].id);
+        } else if (greData[i].topic !== greData[i - 1].topic) {
+          topicIDS2.push(greData[i].id);
+        }
+      }
+
+      this.setState({ words: res.data, currentWord: res.data[0], topicIDS: topicIDS2 });
     });
   }
 
