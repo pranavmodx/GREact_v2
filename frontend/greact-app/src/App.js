@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import { Provider } from "../src/context";
+import { Provider } from "react-redux";
+import { store } from "./store";
 import Navbar from "./components/layout/Navbar";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -13,7 +14,7 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <Provider>
+      <Provider store={store}>
         <Router>
           <div className="App">
             <Navbar />

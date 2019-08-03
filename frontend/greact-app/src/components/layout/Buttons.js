@@ -1,77 +1,66 @@
 import React, { Component } from "react";
-import { Consumer } from "../../context";
+// import { Consumer } from "../../context";
+import { onClickAction, onRandomClickAction } from "../../actions/buttonAction";
+import { connect } from "react-redux";
 
 class Buttons extends Component {
-  onClick(currentWord, totalWordsLength, dispatch, e) {
-    if (e.target.name === "Previous Word") {
-      if (currentWord.id === 0) {
-        dispatch({ type: "SHOW_WORD", payload: totalWordsLength - 1 });
-      } else {
-        dispatch({ type: "SHOW_WORD", payload: currentWord.id - 1 });
-      }
-    } else if (e.target.name === "Next Word") {
-      if (currentWord.id === totalWordsLength - 1) {
-        dispatch({ type: "SHOW_WORD", payload: 0 });
-      } else {
-        dispatch({ type: "SHOW_WORD", payload: currentWord.id + 1 });
-      }
-    }
-  }
-
-  onRandomClick(totalWordsLength, dispatch, e) {
-    if (e.target.name === "Random Word") {
-      dispatch({
-        type: "SHOW_RANDOM_WORD",
-        payload: Math.floor(Math.random() * totalWordsLength - 1) + 1
-      });
-    }
-  }
-
   render() {
+    const { words, currentWord } = this.props;
     return (
-      <Consumer>
-        {value => {
-          const { words, currentWord, dispatch } = value;
-          return (
-            <div className="btn-group mx-auto">
-              <button
-                name="Previous Word"
-                className="btn btn-lg btn-primary"
-                onClick={this.onClick.bind(
-                  this,
-                  currentWord,
-                  words.length,
-                  dispatch
-                )}
-              >
-                Previous Word
-              </button>
-              <button
-                name="Random Word"
-                className="btn btn-dark px-4"
-                onClick={this.onRandomClick.bind(this, words.length, dispatch)}
-              >
-                <i className="fas fa-random mr-2" />
-                Random Word
-              </button>
-              <button
-                name="Next Word"
-                className="btn btn-lg btn-primary"
-                onClick={this.onClick.bind(
-                  this,
-                  currentWord,
-                  words.length,
-                  dispatch
-                )}
-              >
-                Next Word
-              </button>
-            </div>
-          );
-        }}
-      </Consumer>
+      <div className="btn-group mx-auto">
+        <button
+          name="Previous Word"
+          className="btn btn-lg btn-primary"
+          onClick={() =>
+            this.props.onClick({
+              currentWord,
+              totalWordsLength: words.length,
+              targetName: "Previous Word"
+            })
+          }
+        >
+          Previous Word
+        </button>
+        <button
+          name="Random Word"
+          className="btn btn-dark px-4"
+          onClick={() =>
+            this.props.onRandomClick({
+              totalWordsLength: words.length,
+              targetName: "Random Word"
+            })
+          }
+        >
+          <i className="fas fa-random mr-2" />
+          Random Word
+        </button>
+        <button
+          name="Next Word"
+          className="btn btn-lg btn-primary"
+          onClick={() =>
+            this.props.onClick({
+              currentWord,
+              totalWordsLength: words.length,
+              targetName: "Next Word"
+            })
+          }
+        >
+          Next Word
+        </button>
+      </div>
     );
   }
 }
 
-export default Buttons;
+const mapStateToProps = state => ({
+  words: state.gredata.words,
+  currentWord: state.gredata.currentWord
+});
+
+export default connect(
+  mapStateToProps,
+  dispatch => ({
+    onClick: payload => dispatch(onClickAction(payload)),
+    onRandomClick: payload => dispatch(onRandomClickAction(payload))
+  })
+)(Buttons);

@@ -1,32 +1,32 @@
 import React, { Component } from "react";
-import { Consumer } from "../../context";
+// import { Consumer } from "../../context";
+import { connect } from "react-redux";
 
 class Progress extends Component {
   render() {
+    const { words, currentWord } = this.props;
+    // console.log(currentWord);
     return (
-      <Consumer>
-        {value => {
-          const { words, currentWord } = value;
-          // console.log(currentWord);
-          return (
-            <div className="text-center container mx-auto mb-5">
-              <div>
-                <h5 className="text-info">
-                  {currentWord.id + 1} of {words.length}
-                </h5>
-              </div>
-              <div className="progress">
-                <div
-                  className="progress-bar bg-info"
-                  style={{ width: `${currentWord.id / 18}%` }}
-                />
-              </div>
-            </div>
-          );
-        }}
-      </Consumer>
+      <div className="text-center container mx-auto mb-5">
+        <div>
+          <h5 className="text-info">
+            {currentWord.id + 1} of {words.length}
+          </h5>
+        </div>
+        <div className="progress">
+          <div
+            className="progress-bar bg-info"
+            style={{ width: `${currentWord.id / 18}%` }}
+          />
+        </div>
+      </div>
     );
   }
 }
 
-export default Progress;
+const mapStateToProps = state => ({
+  words: state.gredata.words,
+  currentWord: state.gredata.currentWord
+});
+
+export default connect(mapStateToProps)(Progress);
