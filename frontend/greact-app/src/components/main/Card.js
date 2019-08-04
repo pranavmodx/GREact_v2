@@ -6,6 +6,8 @@ import { connect } from "react-redux";
 class Card extends Component {
   render() {
     const { words, currentTopicNo, currentWord, topicIDS } = this.props;
+
+    // console.log(words);
     // console.log(currentWord);
     // console.log(topicIDS);
     // console.log(currentTopicNo);

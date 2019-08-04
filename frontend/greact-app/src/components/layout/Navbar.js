@@ -5,7 +5,7 @@ import Autosuggest from "react-autosuggest";
 import "../layout/Navbar.css";
 import { connect } from "react-redux";
 import { onKeyPressAction } from "../../actions/navbarAction";
-import { initializeDataAction } from "../../actions/initializeDataAction";
+import { authLogout } from "../../actions/authAction";
 
 class Navbar extends Component {
   constructor() {
@@ -21,12 +21,9 @@ class Navbar extends Component {
     dispatch({ type: "HOME", payload: null });
   }
 
-  componentDidMount() {
-    this.props.initializeData();
-  }
-
   render() {
-    const { words } = this.props;
+    const { words, isAuthenticated } = this.props;
+    console.log(isAuthenticated);
 
     const { value, suggestions } = this.state;
 
@@ -117,6 +114,35 @@ class Navbar extends Component {
                   Topics
                 </Link>
               </li>
+              {isAuthenticated ? (
+                <>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link text-light"
+                      to="/login"
+                      onClick={() => this.props.logout()}
+                    >
+                      <i className="fas fa-tree mr-1" />
+                      Logout
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item">
+                    <Link className="nav-link text-light" to="/login">
+                      <i className="fas fa-tree mr-1" />
+                      Login
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link text-light" to="/register">
+                      <i className="fas fa-tree mr-1" />
+                      Register
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
 
             <form className="form-inline ml-auto">
@@ -140,13 +166,15 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = state => ({
-  words: state.gredata.words
+  words: state.gredata.words,
+  loading: state.auth.loading,
+  isAuthenticated: state.auth.token !== null
 });
 
 export default connect(
   mapStateToProps,
   dispatch => ({
     onKeyPress: payload => dispatch(onKeyPressAction(payload)),
-    initializeData: () => dispatch(initializeDataAction())
+    logout: () => dispatch(authLogout())
   })
 )(Navbar);

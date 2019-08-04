@@ -2,16 +2,13 @@ const initialState = {
   loading: false,
   error: null,
   words: [],
-  currentTopicNo: -1,
+  currentTopicNo: 0,
   currentWord: {},
   topicIDS: []
 };
 
 export default function mainReducer(state = initialState, action) {
   const { currentWord, topicIDS, currentTopicNo } = action.payload || {};
-  // console.log(currentWord);
-  console.log(action.payload);
-  // console.log(words);
 
   let topicIDS2 = [];
   let greData = action.payload;
