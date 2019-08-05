@@ -2,6 +2,8 @@ import React from "react";
 import { Form, Icon, Input, Button, Spin } from "antd";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+
 import { authLogin } from "../../actions/authAction";
 
 const FormItem = Form.Item;
@@ -14,6 +16,13 @@ class NormalLoginForm extends React.Component {
       if (!err) {
         this.props.onAuth(values.userName, values.password);
         this.props.history.push("/");
+        axios
+          .get("http://127.0.0.1:8000/rest-auth/user/", {
+            headers: { Authorization: "Bearer " + this.props.token }
+          })
+          .then(res => {
+            console.log(res);
+          });
       }
     });
   };
@@ -93,8 +102,9 @@ const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 
 const mapStateToProps = state => {
   return {
-    loading: state.loading,
-    error: state.error
+    loading: state.auth.loading,
+    error: state.auth.error,
+    token: state.auth.token
   };
 };
 

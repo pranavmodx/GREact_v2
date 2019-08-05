@@ -17,7 +17,6 @@ export function initializeDataAction() {
     return getGreData()
       .then(json => {
         dispatch(initializeDataSuccess(json));
-        // console.log(json);
         return json;
       })
       .catch(error => dispatch(initializeDataFailure(error)));

@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-// import { Consumer } from "../../context";
-import { fetchTopicAction } from "../../actions/fetchTopicAction";
 import { connect } from "react-redux";
+
+import { fetchTopicAction } from "../../actions/fetchTopicAction";
 
 class Card extends Component {
   render() {
     const { words, currentTopicNo, currentWord, topicIDS } = this.props;
 
-    // console.log(words);
-    // console.log(currentWord);
-    // console.log(topicIDS);
-    // console.log(currentTopicNo);
     return (
       <div className="container w-75">
         <div className="card mb-4">

@@ -10,3 +10,7 @@ export const onKeyPressAction = ({ e, key, words }) => dispatch => {
     }
   }
 };
+
+export const backToStartAction = () => dispatch => {
+  dispatch({ type: "BACK_TO_START", payload: null });
+};

@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Icon, Button } from "antd";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+
 import { authSignup } from "../../actions/authAction";
 
 const FormItem = Form.Item;
@@ -125,7 +126,7 @@ class RegistrationForm extends React.Component {
             <Input
               prefix={<Icon type="lock" style={{ color: "rgba(0,0,0,.25)" }} />}
               type="password"
-              placeholder="Password"
+              placeholder="Confirm Password"
               style={{ width: "300px" }}
               onBlur={this.handleConfirmBlur}
             />

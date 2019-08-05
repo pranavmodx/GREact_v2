@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import { Consumer } from "../../context";
-import { onClickAction } from "../../actions/loadTopicAction";
 import { connect } from "react-redux";
+
+import { onClickAction } from "../../actions/loadTopicAction";
 import { initializeDataAction } from "../../actions/initializeDataAction";
 
 class Topics extends Component {
@@ -19,14 +19,8 @@ class Topics extends Component {
       this.setState({ currentPage: number });
   }
 
-  componentDidMount() {
-    // this.props.initializeData();
-  }
-
   render() {
     const { words, topicIDS } = this.props;
-    console.log(words);
-    console.log(topicIDS);
     const indexOfLastTopic = this.state.topicsPerPage * this.state.currentPage;
     const indexOfFirstTopic = indexOfLastTopic - this.state.topicsPerPage;
     const currentTopicIDS = topicIDS.slice(indexOfFirstTopic, indexOfLastTopic);

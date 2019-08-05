@@ -8,8 +8,6 @@ const initialState = {
 };
 
 export default function mainReducer(state = initialState, action) {
-  const { currentWord, topicIDS, currentTopicNo } = action.payload || {};
-
   let topicIDS2 = [];
   let greData = action.payload;
 
@@ -79,12 +77,11 @@ export default function mainReducer(state = initialState, action) {
           Number(state.words[action.payload].topic.slice(0, 3)) - 1,
         currentWord: state.words[action.payload]
       };
-    case "HOME":
+    case "BACK_TO_START":
       return {
         ...state,
         currentWord: state.words[0],
-        currentTopicNo: 0,
-        topicIDS: state.topicIDS2
+        currentTopicNo: 0
       };
     default:
       return state;

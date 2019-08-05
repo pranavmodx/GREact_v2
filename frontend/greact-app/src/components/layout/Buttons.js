@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Consumer } from "../../context";
 import { onClickAction, onRandomClickAction } from "../../actions/buttonAction";
 import { connect } from "react-redux";
 

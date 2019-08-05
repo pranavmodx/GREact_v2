@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import { Consumer } from "../../context";
 import Autosuggest from "react-autosuggest";
-import "../layout/Navbar.css";
 import { connect } from "react-redux";
+
 import { onKeyPressAction } from "../../actions/navbarAction";
+import { backToStartAction } from "../../actions/navbarAction";
 import { authLogout } from "../../actions/authAction";
+
+import "../layout/Navbar.css";
 
 class Navbar extends Component {
   constructor() {
@@ -17,16 +19,11 @@ class Navbar extends Component {
     };
   }
 
-  backToHome(dispatch) {
-    dispatch({ type: "HOME", payload: null });
-  }
-
   render() {
     const { words, isAuthenticated } = this.props;
-    console.log(isAuthenticated);
-
     const { value, suggestions } = this.state;
 
+    // React-Autosuggest functions
     const onChange = (event, { newValue, method }) => {
       this.setState({
         value: newValue
@@ -79,6 +76,7 @@ class Navbar extends Component {
         suggestions: []
       });
     };
+    // End of React-Autosuggest Functions
 
     return (
       <React.Fragment>
@@ -87,17 +85,13 @@ class Navbar extends Component {
             <Link
               className="navbar-brand text-success"
               to="/"
-              // onClick={this.backToHome.bind(this, dispatch)}
+              onClick={() => this.props.backToStart()}
             >
               GREact
             </Link>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link
-                  className="nav-link text-light"
-                  to="/"
-                  // onClick={this.backToHome.bind(this, dispatch)}
-                >
+                <Link className="nav-link text-light" to="/">
                   <i className="fas fa-home mr-1" />
                   Home
                 </Link>
@@ -122,7 +116,7 @@ class Navbar extends Component {
                       to="/login"
                       onClick={() => this.props.logout()}
                     >
-                      <i className="fas fa-tree mr-1" />
+                      <i className="fas fa-sign-out-alt" />
                       Logout
                     </Link>
                   </li>
@@ -131,13 +125,13 @@ class Navbar extends Component {
                 <>
                   <li className="nav-item">
                     <Link className="nav-link text-light" to="/login">
-                      <i className="fas fa-tree mr-1" />
+                      <i className="fas fa-sign-in-alt" />
                       Login
                     </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link text-light" to="/register">
-                      <i className="fas fa-tree mr-1" />
+                      <i className="fas fa-user-plus" />
                       Register
                     </Link>
                   </li>
@@ -145,6 +139,7 @@ class Navbar extends Component {
               )}
             </ul>
 
+            {/* React-Autosuggest Search bar form */}
             <form className="form-inline ml-auto">
               <div className="mr-3" onChange={this.onClickChange}>
                 <Autosuggest
@@ -175,6 +170,7 @@ export default connect(
   mapStateToProps,
   dispatch => ({
     onKeyPress: payload => dispatch(onKeyPressAction(payload)),
+    backToStart: () => dispatch(backToStartAction()),
     logout: () => dispatch(authLogout())
   })
 )(Navbar);

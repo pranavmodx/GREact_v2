@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-// import { Consumer } from "../../context";
+import { connect } from "react-redux";
+
 import Progress from "../layout/Progress";
 import Card from "../main/Card";
 import Buttons from "../layout/Buttons";
-import { initializeDataAction } from "../../actions/initializeDataAction";
-import { connect } from "react-redux";
 
 class Home extends Component {
-  // componentDidMount() {
-  //   this.props.initializeData();
-  // }
   render() {
-    const { loading, error, currentWord } = this.props;
-    // console.log(currentWord);
+    const { loading, error } = this.props;
     if (error) {
       return <h1>Error! {error.message}</h1>;
     }
@@ -38,9 +33,4 @@ const mapStateToProps = state => ({
   currentWord: state.gredata.currentWord
 });
 
-export default connect(
-  mapStateToProps
-  // dispatch => ({
-  //   initializeData: () => dispatch(initializeDataAction())
-  // })
-)(Home);
+export default connect(mapStateToProps)(Home);

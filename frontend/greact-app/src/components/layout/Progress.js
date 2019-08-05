@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// import { Consumer } from "../../context";
 import { connect } from "react-redux";
 
 class Progress extends Component {
   render() {
     const { words, currentWord } = this.props;
-    // console.log(currentWord);
     return (
       <div className="text-center container mx-auto mb-5">
         <div>

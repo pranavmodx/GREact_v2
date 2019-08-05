@@ -3,9 +3,6 @@ export const onClickAction = ({
   totalWordsLength,
   targetName
 }) => dispatch => {
-  console.log(currentWord);
-  console.log(totalWordsLength);
-  console.log(targetName);
   if (targetName === "Previous Word") {
     if (currentWord.id === 0) {
       dispatch({ type: "SHOW_WORD", payload: totalWordsLength - 1 });

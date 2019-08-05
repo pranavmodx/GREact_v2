@@ -11,6 +11,8 @@ import Topics from "./components/pages/Topics";
 import NotFound from "./components/pages/NotFound";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
+import UserProfile from "./components/pages/UserProfile";
+import Forbidden from "./components/pages/Forbidden";
 
 import { checkAuthState } from "./actions/authAction";
 import { initializeDataAction } from "./actions/initializeDataAction";
@@ -35,6 +37,16 @@ class App extends Component {
             <Route exact path="/topics" component={Topics} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
+            {this.props.isAuthenticated ? (
+              <>
+                <Route exact path="/user-profile" component={UserProfile} />
+              </>
+            ) : (
+              <>
+                <Route component={Forbidden} />
+              </>
+            )}
+
             <Route component={NotFound} />
           </Switch>
         </div>
@@ -43,8 +55,12 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.token !== null
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   dispatch => ({
     initializeData: () => dispatch(initializeDataAction()),
     onTryAutoLogin: () => dispatch(checkAuthState())
