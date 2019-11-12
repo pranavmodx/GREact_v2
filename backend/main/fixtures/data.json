@@ -135,7 +135,7 @@
       "pk":"13",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Avert",
          "meaning":"turn away or prevent.",
          "sentence":"He did his best to Avert suspicion.",
@@ -146,7 +146,7 @@
       "pk":"14",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Circumvent",
          "meaning":"avoid.",
          "sentence":"They found a way of Circumventing the law.",
@@ -157,7 +157,7 @@
       "pk":"15",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Deflect",
          "meaning":"divert the course of something.",
          "sentence":"All attempts to Deflect attention from his private life have failed.",
@@ -168,7 +168,7 @@
       "pk":"16",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Elude",
          "meaning":"to escape or avoid in a cunning manner.",
          "sentence":"The two men managed to Elude the police for six weeks.",
@@ -179,7 +179,7 @@
       "pk":"17",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Evade",
          "meaning":"when you evade something, you escape it.",
          "sentence":"For two weeks, they Evaded the press.",
@@ -190,7 +190,7 @@
       "pk":"18",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Parry",
          "meaning":"avoid a question or blow.",
          "sentence":"He parried the question asked by the journalist.",
@@ -201,7 +201,7 @@
       "pk":"19",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Shirk",
          "meaning":"avoid duty or responsibility.",
          "sentence":"Discipline in the company was strict and no one Shirked his/her duties.",
@@ -212,7 +212,7 @@
       "pk":"20",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Shunt",
          "meaning":"move to a less important place or position.",
          "sentence":"John was Shunted sideways to a job in sales.",
@@ -223,7 +223,7 @@
       "pk":"21",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Skirt",
          "meaning":"avoid fulfilling, answering, or performing (duties, questions, or issues).",
          "sentence":"She Skirted the problem.",
@@ -234,7 +234,7 @@
       "pk":"22",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"Swerve",
          "meaning":"changing directions suddenly, possibly to avoid a collision.",
          "sentence":"The bus suddenly Swerved into his path.",
@@ -245,7 +245,7 @@
       "pk":"23",
       "model":"main.WordData",
       "fields":{
-         "topic":"2. Avoid /doge",
+         "topic":"2. Avoid / dodge",
          "word":"X Headlong",
          "meaning":"done rashly, or really quickly.",
          "sentence":"The government is taking care not to rush headlong into another controversy.",
@@ -432,7 +432,7 @@
       "pk":"40",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Tepid",
          "meaning":"slightly warm.",
          "sentence":"The mushrooms develop more flavor if you use the slower method of soakingthem in tepid water for six hours or overnight.",
@@ -443,7 +443,7 @@
       "pk":"41",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Conflagration",
          "meaning":"a large and destructive fire.",
          "sentence":"The conflgaration destroyed property worth millions.",
@@ -454,7 +454,7 @@
       "pk":"42",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Scald",
          "meaning":"injure with hot liquid.",
          "sentence":"Be careful not to Scald yourself with the steam.",
@@ -465,7 +465,7 @@
       "pk":"43",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Scathe",
          "meaning":"injure or harm, especially by fire.",
          "sentence":"Her sensitive skin got Scathed because of excessive heat.",
@@ -476,7 +476,7 @@
       "pk":"44",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Scorch",
          "meaning":"burn the surface of something.",
          "sentence":"I Scorched my dress when I was ironing it.",
@@ -487,7 +487,7 @@
       "pk":"45",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Sear",
          "meaning":"burn the surface by heat.",
          "sentence":"The heat of the sun Seared their faces.",
@@ -498,7 +498,7 @@
       "pk":"46",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Singe",
          "meaning":"burn superficially or lightly.",
          "sentence":"He Singed his hair as he tried to light his cigarette.",
@@ -509,7 +509,7 @@
       "pk":"47",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Swelter",
          "meaning":"be very hot.",
          "sentence":"Passengers Sweltered in temperatures of over 45 degrees.",
@@ -520,7 +520,7 @@
       "pk":"48",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"Torrid",
          "meaning":"very hot.",
          "sentence":"We watched him shoot for the movie on a Torrid afternoon.",
@@ -531,7 +531,7 @@
       "pk":"49",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"X Frigid",
          "meaning":"very cold.",
          "sentence":"Frigid climate spoiled their entire journey.",
@@ -542,7 +542,7 @@
       "pk":"50",
       "model":"main.WordData",
       "fields":{
-         "topic":"6. Burn/Hot /x cold",
+         "topic":"6. Burn/Hot/cold",
          "word":"X Glacial",
          "meaning":"very cold.",
          "sentence":"The glacial wind whipped her skin blue.",
@@ -608,7 +608,7 @@
       "pk":"56",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Adept",
          "meaning":"skillful.",
          "sentence":"He became Adept at getting even the shyest students to talk.",
@@ -619,7 +619,7 @@
       "pk":"57",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Adroit",
          "meaning":"skillful, esp with using hands.",
          "sentence":"I want to become an Adroit guitarist.",
@@ -630,7 +630,7 @@
       "pk":"58",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Agile",
          "meaning":"moving quickly and easily.",
          "sentence":"He had the agility of a man half his age.",
@@ -641,7 +641,7 @@
       "pk":"59",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Consummate",
          "meaning":"very skillful.",
          "sentence":"She was a Consummate performer.",
@@ -652,9 +652,9 @@
       "pk":"60",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Deft",
-         "meaning":"done neatly and skilfully.",
+         "meaning":"done neatly and skillfully.",
          "sentence":"He finished off the painting with a few Deft strokes of the brush.",
          "id":59
       }
@@ -663,7 +663,7 @@
       "pk":"61",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Dexterous",
          "meaning":"skilled at using hands.",
          "sentence":"Paul Fraier was quietly Dexterous on bass guitar.",
@@ -674,7 +674,7 @@
       "pk":"62",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Limber",
          "meaning":"flexible.",
          "sentence":"His muscles are Limber that is why he is into gymnastics.",
@@ -685,7 +685,7 @@
       "pk":"63",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Lithe",
          "meaning":"flexible.",
          "sentence":"The dancer has a Lithe body.",
@@ -696,7 +696,7 @@
       "pk":"64",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Nimble",
          "meaning":"able to move quickly and easily.",
          "sentence":"You need Nimble fingers for that job.",
@@ -707,7 +707,7 @@
       "pk":"65",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Proficient",
          "meaning":"efficient.",
          "sentence":"With practice, you should become Proficient within six months.",
@@ -718,7 +718,7 @@
       "pk":"66",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Prowess",
          "meaning":"exceptional skill or ability.",
          "sentence":"He was complimented on his Prowess as an oarsman.",
@@ -729,7 +729,7 @@
       "pk":"67",
       "model":"main.WordData",
       "fields":{
-         "topic":"8. Flexible / Skilful",
+         "topic":"8. Flexible / Skillful",
          "word":"Supple",
          "meaning":"bending, moving easily.",
          "sentence":"These exercises will help to keep you Supple.",
@@ -817,7 +817,7 @@
       "pk":"75",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Appalling",
          "meaning":"shocking.",
          "sentence":"The brutality of the crime appalled the public.",
@@ -828,7 +828,7 @@
       "pk":"76",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Egregious",
          "meaning":"extremely unpleasant or bad.",
          "sentence":"There are several prime ministers in the past who have committed far moreEgregious offenses.",
@@ -839,7 +839,7 @@
       "pk":"77",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Ghastly",
          "meaning":"causing horror.",
          "sentence":"She woke up in the middle of a Ghastly nightmare.",
@@ -850,7 +850,7 @@
       "pk":"78",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Grisly",
          "meaning":"causing horror.",
          "sentence":"The jurors saw Grisly photos of the crime scene.",
@@ -861,7 +861,7 @@
       "pk":"79",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Gross",
          "meaning":"vulgar or disgusting.",
          "sentence":"These Gross remarks will not be tolerated.",
@@ -872,7 +872,7 @@
       "pk":"80",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Grotesque",
          "meaning":"ugly or repulsive.",
          "sentence":"All countries should mandate large, Grotesque pictorial warnings on cigarettepackets.",
@@ -883,7 +883,7 @@
       "pk":"81",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Gruesome",
          "meaning":"causing horror",
          "sentence":"We spent a week in a Gruesome apartment in Miami.",
@@ -894,7 +894,7 @@
       "pk":"82",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Heinous",
          "meaning":"wicked or evil.",
          "sentence":"There were Heinous accusations made against them for involving in child labourand assault.",
@@ -905,7 +905,7 @@
       "pk":"83",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Hideous",
          "meaning":"very ugly or repulsive.",
          "sentence":"Their new color scheme is Hideous!",
@@ -916,7 +916,7 @@
       "pk":"84",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Horrendous",
          "meaning":"horrible.",
          "sentence":"The police officer said the attack was the most Horrendous he had ever seen.",
@@ -927,7 +927,7 @@
       "pk":"85",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Macabre",
          "meaning":"horrifying because of involvement with death,injury,etc.",
          "sentence":"The scene of crime was a Macabre sight.",
@@ -938,7 +938,7 @@
       "pk":"86",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Monstrous",
          "meaning":"very ugly or horrifying.",
          "sentence":"He is considering launching new courses in New York and sees Latin America asa potentially Monstrous market.",
@@ -949,7 +949,7 @@
       "pk":"87",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Morbid",
          "meaning":"showing interest in unpleasant and disturbing subjects (death, disease, etc).",
          "sentence":"He had a Morbid fascination with blood.",
@@ -960,7 +960,7 @@
       "pk":"88",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Unsightly",
          "meaning":"ugly.",
          "sentence":"The accident site was unslightly.",
@@ -971,7 +971,7 @@
       "pk":"89",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"Vile",
          "meaning":"extremely unpleasant.",
          "sentence":"The weather was really Vile most of the time.",
@@ -982,7 +982,7 @@
       "pk":"90",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"X Aesthetic",
          "meaning":"pleasing appearance or artistic beauty.",
          "sentence":"The beautiful sculpture was a mirror image of the carver's aesthetic values.",
@@ -993,7 +993,7 @@
       "pk":"91",
       "model":"main.WordData",
       "fields":{
-         "topic":"10.Horrifying/ shocking/ x Attraction",
+         "topic":"10.Horrifying/ shocking/ Attraction",
          "word":"X Comely",
          "meaning":"attractive or beautiful.",
          "sentence":"The General's lady is a comely, affable woman.",
@@ -1180,7 +1180,7 @@
       "pk":"108",
       "model":"main.WordData",
       "fields":{
-         "topic":"13.Separated/ x Connected",
+         "topic":"13.Separated/Connected",
          "word":"Disjointed",
          "meaning":"disconnected.",
          "sentence":"The novel suffers from a Disjointed plot and insignificant characters.",
@@ -1191,7 +1191,7 @@
       "pk":"109",
       "model":"main.WordData",
       "fields":{
-         "topic":"13.Separated/ x Connected",
+         "topic":"13.Separated/Connected",
          "word":"Polarize",
          "meaning":"divide in 2 opposite groups.",
          "sentence":"Public opinion has Polarized on this issue.",
@@ -1202,7 +1202,7 @@
       "pk":"110",
       "model":"main.WordData",
       "fields":{
-         "topic":"13.Separated/ x Connected",
+         "topic":"13.Separated/Connected",
          "word":"Segregate",
          "meaning":"separate",
          "sentence":"Whites and blacks were Segregated into different parts of town.",
@@ -1213,7 +1213,7 @@
       "pk":"111",
       "model":"main.WordData",
       "fields":{
-         "topic":"13.Separated/ x Connected",
+         "topic":"13.Separated/Connected",
          "word":"Winnow",
          "meaning":"separate valuable things from the unwanted.",
          "sentence":"She stood there Winnowing chaff all day in the field.",
@@ -1224,7 +1224,7 @@
       "pk":"112",
       "model":"main.WordData",
       "fields":{
-         "topic":"13.Separated/ x Connected",
+         "topic":"13.Separated/Connected",
          "word":"X Nexus",
          "meaning":"connection",
          "sentence":"The nexus between industry and political power is undeniable.",
@@ -1433,7 +1433,7 @@
       "pk":"131",
       "model":"main.WordData",
       "fields":{
-         "topic":"17.Teacher/ Guide/ x Student",
+         "topic":"17.Teacher/ Guide/ Student",
          "word":"Mentor",
          "meaning":"a teacher or guide.",
          "sentence":"She was a friend and Mentor to many young actors.",
@@ -1444,7 +1444,7 @@
       "pk":"132",
       "model":"main.WordData",
       "fields":{
-         "topic":"17.Teacher/ Guide/ x Student",
+         "topic":"17.Teacher/ Guide/ Student",
          "word":"Pedagogue",
          "meaning":"a strict teacher.",
          "sentence":"He was a Pedagogue who really believed that he could make a difference inyoung lives.",
@@ -1455,7 +1455,7 @@
       "pk":"133",
       "model":"main.WordData",
       "fields":{
-         "topic":"17.Teacher/ Guide/ x Student",
+         "topic":"17.Teacher/ Guide/ Student",
          "word":"X Protege",
          "meaning":"a student",
          "sentence":"She is a protg of the great violinist Yehudi Menuhin.",
